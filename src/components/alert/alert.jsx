@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import parse from 'html-react-parser';
 import { X } from 'react-feather';
+import './alert.scss';
 
 export default function Alert(props) {
   const { type, isDismissable, children } = props;
