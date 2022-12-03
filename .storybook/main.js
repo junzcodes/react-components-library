@@ -9,7 +9,8 @@ module.exports = {
     "@storybook/addon-a11y",
     "@storybook/addon-console",
     "@storybook/addon-interactions",
-    "@storybook/preset-create-react-app"
+    "@storybook/preset-create-react-app",
+    "storybook-dark-mode",
   ],
   "framework": "@storybook/react",
   "core": {

@@ -12,8 +12,8 @@ export default function Alert(props) {
     return (
       <div className={`alert ${type}`}>
         {isDismissable && (
-        <button type="button" aria-label="Close" onClick={() => { setShowAlert(!showAlert); }}>
-          <X size="16" />
+        <button className="close" type="button" aria-label="Close" onClick={() => { setShowAlert(!showAlert); }}>
+          <X size="24" />
         </button>
         )}
         {parse(children)}

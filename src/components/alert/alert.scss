@@ -1,0 +1,22 @@
+@import "../../styles/index.scss";
+
+%alertBase {
+  background-color: $white;
+  border-bottom: 0.25rem solid $purple;
+  color: $black;
+  padding: 1rem 1.5rem 0.25rem;
+  position: relative;
+  text-align: center;
+}
+
+.alert {
+  @extend %alertBase;
+
+  &.warning {
+    border-color: $warning;
+  }
+
+  &.error {
+    border-color: $error;
+  }
+}

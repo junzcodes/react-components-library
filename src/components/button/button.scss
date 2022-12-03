@@ -1,0 +1,51 @@
+@import "../../styles/index.scss";
+
+%buttonBase {
+  background-color: $white;
+  border-radius: 0.5rem;
+  border: 2px solid $white;
+  color: $purple;
+  cursor: pointer;
+  font-size: $fontxs;
+  font-weight: 600;
+  padding: 0.875rem 1rem;
+  transition: filter 0.2s ease-in;
+
+  &:hover,
+  &:focus {
+    filter: brightness(80%);
+  }
+}
+
+.button {
+  @extend %buttonBase;
+
+  &.secondary {
+    background-color: $purple;
+    border-color: $purple;
+    color: $white;
+  }
+
+  &.link {
+    background-color: transparent;
+    border-color: transparent;
+    color: $white;
+    padding: 0.875rem 0;
+    position: relative;
+
+    &:after {
+      background-color: $white;
+      bottom: 0.5rem;
+      content: "";
+      height: 1px;
+      left: 0;
+      position: absolute;
+      transition: width 0.2s linear;
+      width: 0;
+    }
+
+    &:hover:after {
+      width: 100%;
+    }
+  }
+}
