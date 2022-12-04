@@ -23,6 +23,11 @@ $boxshadow: rgba(149, 157, 165, 0.2) 0px 0.5rem 1.5rem;
   margin: 0 0 0.75rem 0;
 }
 
+@function rem($value) {
+  $remValue: ($value / 16) + rem; 
+  @return $remValue;
+}
+
 /* global styles */
 
 body {
@@ -42,6 +47,11 @@ h5,
 h6,
 p {
   @extend %textElementsBase;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
 }
 
 button.close {

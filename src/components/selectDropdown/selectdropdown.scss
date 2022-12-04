@@ -1,0 +1,46 @@
+@import "../../styles/index";
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+  &-toggle {
+    border-radius: 0;
+    min-width: rem(250);
+    padding-right: rem(40);
+    position: relative;
+    text-align: left;
+
+    svg {
+      position: absolute;
+      right: rem(10);
+      stroke: $purple;
+      top: rem(10);
+    }
+  }
+
+  &-options {
+    background-color: $white;
+    left: 2px;
+    padding-bottom: 0.5rem;
+    padding-left: 0;
+    position: absolute;
+    top: calc(100% + -2px);
+    width: calc(100% - 4px);
+
+    li {
+      color: $black;
+      cursor: pointer;
+      padding: 0.5rem rem(18);
+
+      &:hover {
+        color: $purple;
+      }
+    }
+  }
+
+  &.secondary {
+    svg {
+      stroke: $white;
+    }
+  }
+}
