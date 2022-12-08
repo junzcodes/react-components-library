@@ -1,5 +1,3 @@
-// Button.stories.js|jsx
-
 import React from 'react';
 import SelectDropdown from './selectdropdown';
 
@@ -20,6 +18,7 @@ Primary.args = {
 };
 
 Secondary.args = {
+  label: 'Select an option',
   defaultValue: 'Option 1',
   options: ['option 2', 'option 3', 'option 4', 'option 5'],
   type: 'secondary',

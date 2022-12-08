@@ -1,0 +1,25 @@
+@import "../../styles/index.scss";
+
+%inputBase {
+  border-radius: rem(8);
+  font-family: $fontfamily;
+  font-size: 0.875rem;
+  max-width: rem(300);
+  padding: 1rem;
+  width: 100%;
+}
+
+fieldset {
+  border: 0;
+  label {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"] {
+  @extend %inputBase;
+}
