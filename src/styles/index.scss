@@ -24,8 +24,14 @@ $boxshadow: rgba(149, 157, 165, 0.2) 0px 0.5rem 1.5rem;
 }
 
 @function rem($value) {
-  $remValue: ($value / 16) + rem; 
+  $remValue: ($value / 16) + rem;
   @return $remValue;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: calc(100% / #{$i});
+  }
 }
 
 /* global styles */
