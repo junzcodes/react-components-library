@@ -4,21 +4,22 @@ import './card.scss';
 
 export default function Card(props) {
   const {
-    columnClass, title, subtitle, description, bgColor, txtColor, txtAlign,
+    columnClass, icon, title, subtitle, description, bgColor, txtColor, txtAlign,
   } = props;
 
   return (
     <div className={`card ${columnClass}`} style={{ backgroundColor: bgColor, color: txtColor, textAlign: txtAlign }}>
+      { icon && (
+      <div className="card-icon">
+        <img src={icon} alt={title} />
+      </div>
+      )}
       <div className="card-header">
         { title && (
-        <div className="card-header-title">
-          { title }
-        </div>
+        <h3>{title}</h3>
         )}
         {subtitle && (
-        <h4 className="card-subtitle">
-          {subtitle}
-        </h4>
+        <h4>{subtitle}</h4>
         )}
       </div>
       {description && (
@@ -32,6 +33,7 @@ export default function Card(props) {
 
 Card.propTypes = {
   columnClass: PropTypes.string,
+  icon: PropTypes.string,
   title: PropTypes.string,
   subtitle: PropTypes.string,
   description: PropTypes.string,
@@ -42,6 +44,7 @@ Card.propTypes = {
 
 Card.defaultProps = {
   columnClass: '',
+  icon: '',
   title: '',
   subtitle: '',
   description: '',

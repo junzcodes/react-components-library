@@ -1,1 +1,12 @@
 @import "../../styles/index.scss";
+
+.card {
+  border-radius: rem(8);
+  box-shadow: $boxshadow;
+  padding: rem(40) rem(24);
+  min-height: rem(240);
+
+  &-icon {
+    margin-bottom: rem(10);
+  }
+}
